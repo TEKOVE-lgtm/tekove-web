@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123d2b">
+<title>TEKOVE | Bioplásticos que dan vida</title>
+<style>
+:root{--forest:#123d2b;--green:#24734a;--lime:#c8e6a0;--orange:#ef8a35;--cream:#f7f5ed;--ink:#18251d;--muted:#647269;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,90%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(18,61,43,.96);backdrop-filter:blur(10px);color:white;border-bottom:1px solid #ffffff22}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:2px;font-size:1.35rem}.logo{width:39px;height:39px;border-radius:13px;background:var(--lime);color:var(--forest);display:grid;place-items:center;font-size:1.15rem}
+.navlinks{display:flex;gap:25px;font-size:.9rem;color:#e3eee6}.navlinks a:hover{color:var(--lime)}.nav-cta{background:var(--orange);color:#24170c;padding:10px 17px;border-radius:999px;font-weight:800;font-size:.88rem}
+.hero{background:radial-gradient(circle at 80% 25%,#2b8054 0,transparent 32%),linear-gradient(120deg,#0d3022,#174d35 65%,#1d6443);color:white;overflow:hidden;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center;padding:92px 0 100px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--lime);font-size:.78rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}.eyebrow:before{content:"";width:25px;height:2px;background:var(--orange)}
+h1{font-size:clamp(3rem,6vw,5.5rem);line-height:.98;letter-spacing:-3px;margin:20px 0}.hero h1 span{color:var(--lime)}.hero p{color:#d5e4d9;max-width:560px;font-size:1.12rem}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-block;padding:13px 21px;border-radius:999px;font-weight:800}.btn.primary{background:var(--orange);color:#25180d}.btn.secondary{border:1px solid #ffffff70;color:white}.hero-art{min-height:360px;display:grid;place-items:center;position:relative}.orb{width:min(340px,75vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#d7eead,#80b86c);display:grid;place-items:center;box-shadow:0 35px 90px #071e1466;position:relative}.orb:before{content:"";position:absolute;inset:23px;border:1px solid #ffffff9c;border-radius:50%}.leaf{font-size:8rem;filter:drop-shadow(0 12px 10px #315a2d55)}.orbit-label{position:absolute;background:white;color:var(--forest);padding:12px 17px;border-radius:14px;font-weight:850;box-shadow:0 12px 35px #001b1240}.label-one{top:35px;right:0}.label-two{bottom:35px;left:0}.scroll{color:#d5e4d9;font-size:.78rem;letter-spacing:1.5px;margin-top:35px}
+section{padding:85px 0}.section-kicker{color:var(--green);font-size:.76rem;font-weight:900;letter-spacing:2px;text-transform:uppercase}.section-title{font-size:clamp(2rem,4vw,3.1rem);line-height:1.1;letter-spacing:-1.4px;color:var(--forest);margin:12px 0 18px}.section-intro{color:var(--muted);max-width:650px;margin:0 0 35px}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.about-panel{background:#e7efdf;border-radius:28px;padding:34px;position:relative;overflow:hidden}.about-panel:after{content:"TEKOVE";position:absolute;right:-8px;bottom:-28px;font-size:4.5rem;font-weight:950;color:#123d2b0c;letter-spacing:3px}.quote{font-size:1.5rem;font-weight:850;color:var(--forest);line-height:1.3}.quote span{color:var(--green)}.pill-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:25px}.pill{font-size:.8rem;font-weight:750;background:white;color:var(--green);padding:8px 12px;border-radius:999px}
+.products{background:#fff}.product-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.product-card{border:1px solid #e8ece7;border-radius:24px;padding:28px;transition:.2s}.product-card:hover{transform:translateY(-5px);box-shadow:0 18px 45px #163b2412}.product-top{display:flex;justify-content:space-between;align-items:center}.product-icon{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;font-size:1.8rem;background:#f4eadc}.product-card:nth-child(2) .product-icon{background:#e7efdf}.product-tag{font-size:.72rem;font-weight:850;color:var(--green);background:#edf5e9;padding:7px 10px;border-radius:999px}.product-card h3{font-size:1.5rem;color:var(--forest);margin:20px 0 8px}.product-card p{color:var(--muted);margin:0 0 22px}.cost{border-top:1px solid #e9eee9;padding-top:18px;display:flex;justify-content:space-between;align-items:end}.cost small{display:block;color:var(--muted);font-size:.75rem}.cost strong{font-size:1.8rem;color:var(--forest)}.cost em{font-size:.78rem;color:var(--muted);font-style:normal}
+.note{font-size:.83rem;color:var(--muted);margin-top:18px}
+.b2b{background:var(--forest);color:white}.b2b .section-kicker{color:var(--lime)}.b2b .section-title{color:white}.b2b .section-intro{color:#c8d8cd}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.step{border:1px solid #ffffff2b;border-radius:20px;padding:25px;background:#ffffff08}.step-num{color:var(--lime);font-size:.8rem;font-weight:900;letter-spacing:2px}.step h3{font-size:1.18rem;margin:12px 0 7px}.step p{color:#c8d8cd;font-size:.93rem;margin:0}
+.impact-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.impact-visual{min-height:280px;border-radius:28px;background:linear-gradient(140deg,#e3efd8,#f6e8d6);display:grid;place-items:center;font-size:6rem;position:relative;overflow:hidden}.impact-visual:after{content:"";position:absolute;width:220px;height:220px;border:1px solid #fff;border-radius:50%}.impact-points{display:grid;gap:17px}.impact-point{display:flex;gap:14px;align-items:flex-start}.check{width:30px;height:30px;flex:0 0 30px;border-radius:50%;background:#e4efdc;color:var(--green);display:grid;place-items:center;font-weight:900}.impact-point strong{display:block;color:var(--forest)}.impact-point span{color:var(--muted);font-size:.92rem}
+.contact{background:#f0f3e9}.contact-box{background:var(--orange);border-radius:28px;padding:45px;display:flex;justify-content:space-between;gap:25px;align-items:center}.contact-box h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.1;color:#25180d;margin:0 0 10px}.contact-box p{color:#50351e;margin:0;max-width:570px}.contact-box .btn{background:var(--forest);color:white;white-space:nowrap}
+footer{background:#0b261b;color:#c8d8cd;padding:28px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:.84rem}.footer-brand{font-weight:900;letter-spacing:2px;color:white}
+@media(max-width:760px){.navlinks{display:none}.hero-grid,.about-grid,.impact-grid{grid-template-columns:1fr}.hero-grid{padding:70px 0 75px;gap:15px}.hero-art{min-height:300px}.orb{width:260px}.leaf{font-size:6rem}.label-one{right:-5px}.label-two{left:-5px}.product-grid,.steps{grid-template-columns:1fr}.contact-box{padding:30px;display:block}.contact-box .btn{margin-top:22px}.footer-row{flex-direction:column;text-align:center}.section{padding:65px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="#inicio"><span class="logo">T</span> TEKOVE</a>
+<div class="navlinks"><a href="#nosotros">Nosotros</a><a href="#productos">Productos</a><a href="#modelo">Modelo B2B</a><a href="#impacto">Impacto</a></div>
+<a class="nav-cta" href="#contacto">Conócenos</a>
+</nav></div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+<div><div class="eyebrow">Innovación que nace de la naturaleza</div>
+<h1>Residuos de hoy.<br><span>Materiales</span> para mañana.</h1>
+<p>En TEKOVE transformamos residuos orgánicos en láminas de bioplástico para que otras empresas puedan crear productos con una nueva visión de sostenibilidad.</p>
+<div class="actions"><a class="btn primary" href="#productos">Descubre nuestros productos ↗</a><a class="btn secondary" href="#nosotros">Conoce TEKOVE</a></div>
+<div class="scroll">BIOPLÁSTICOS · ECONOMÍA CIRCULAR · B2B</div></div>
+<div class="hero-art"><div class="orb"><div class="leaf">🌱</div></div><div class="orbit-label label-one">♻ Economía circular</div><div class="orbit-label label-two">Hecho a partir de residuos</div></div>
+</div></section>
+<section id="nosotros"><div class="wrap about-grid">
+<div><div class="section-kicker">Quiénes somos</div><h2 class="section-title">Una empresa con propósito y visión de mercado.</h2>
+<p class="section-intro">CEOM significa <strong>Concepto de Empresa Orientada hacia el Mercado</strong>. Bajo esta visión nace TEKOVE, una marca que conecta innovación, aprovechamiento de recursos y las necesidades de otras empresas.</p>
+<p>“Tekove” significa <strong>vida</strong> en guaraní. Nuestro nombre representa la idea de dar una nueva vida a residuos orgánicos, convirtiéndolos en materia prima con potencial para distintas industrias.</p></div>
+<div class="about-panel"><div class="quote">Creemos que los residuos no son el final de una historia: pueden ser el <span>comienzo de un nuevo material.</span></div><div class="pill-row"><span class="pill">Innovación</span><span class="pill">Sostenibilidad</span><span class="pill">Enfoque empresarial</span></div></div>
+</div></section>
+<section class="products" id="productos"><div class="wrap">
+<div class="section-kicker">Nuestro catálogo</div><h2 class="section-title">Dos recetas. Una nueva oportunidad.</h2>
+<p class="section-intro">Desarrollamos láminas de bioplástico a partir de residuos orgánicos. Cada alternativa aprovecha una materia prima diferente.</p>
+<div class="product-grid">
+<article class="product-card"><div class="product-top"><div class="product-icon">☕</div><span class="product-tag">RECETA 01</span></div><h3>Bioplástico de café</h3><p>Una lámina elaborada a partir de residuos de café, que busca dar valor a un material orgánico que normalmente se desecha.</p><div class="cost"><div><small>Costo de la lámina</small><strong>Bs 2,91</strong></div><em>Por lámina</em></div></article>
+<article class="product-card"><div class="product-top"><div class="product-icon">🍊</div><span class="product-tag">RECETA 02</span></div><h3>Bioplástico de naranja</h3><p>Una alternativa desarrollada con cáscaras de naranja, aprovechando residuos de origen frutal para crear una lámina de bioplástico.</p><div class="cost"><div><small>Costo de la lámina</small><strong>Bs 11,42</strong></div><em>Por lámina</em></div></article>
+</div>
+<p class="note">Los importes indicados corresponden a los costos por lámina proporcionados para la presentación. No representan necesariamente el precio de venta.</p>
+</div></section>
+<section class="b2b" id="modelo"><div class="wrap">
+<div class="section-kicker">Nuestro modelo de negocio</div><h2 class="section-title">Somos B2B: nuestra materia prima impulsa otras ideas.</h2>
+<p class="section-intro">TEKOVE distribuye láminas de bioplástico a otras empresas. Nuestros clientes utilizan estas láminas como materia prima y las transforman en sus propios productos finales.</p>
+<div class="steps">
+<div class="step"><div class="step-num">01 / ORIGEN</div><h3>Residuos orgánicos</h3><p>Aprovechamos residuos de café y cáscaras de naranja como base de nuestras recetas.</p></div>
+<div class="step"><div class="step-num">02 / TEKOVE</div><h3>Láminas de bioplástico</h3><p>Desarrollamos y distribuimos el material para que otras empresas puedan incorporarlo a sus procesos.</p></div>
+<div class="step"><div class="step-num">03 / EMPRESAS CLIENTES</div><h3>Productos finales</h3><p>Nuestros clientes convierten las láminas en productos terminados para sus propios mercados.</p></div>
+</div></div></section>
+<section id="impacto"><div class="wrap impact-grid">
+<div class="impact-visual">♻️🌿</div>
+<div><div class="section-kicker">Nuestro propósito</div><h2 class="section-title">Dar valor a lo que antes se descartaba.</h2>
+<p class="section-intro">TEKOVE propone una forma de pensar los materiales desde la economía circular: aprovechar recursos orgánicos y convertirlos en oportunidades para la industria.</p>
+<div class="impact-points">
+<div class="impact-point"><div class="check">✓</div><div><strong>Aprovechamiento de residuos</strong><span>Utilizamos residuos de café y cáscaras de naranja como materia prima.</span></div></div>
+<div class="impact-point"><div class="check">✓</div><div><strong>Innovación en materiales</strong><span>Exploramos alternativas de bioplástico para aplicaciones empresariales.</span></div></div>
+<div class="impact-point"><div class="check">✓</div><div><strong>Colaboración entre empresas</strong><span>Conectamos nuestro material con empresas que lo transforman en productos finales.</span></div></div>
+</div></div></div></section>
+<section class="contact" id="contacto"><div class="wrap"><div class="contact-box"><div><h2>¿Tu empresa busca nuevas materias primas?</h2><p>Conoce las láminas de bioplástico TEKOVE y conversemos sobre oportunidades de colaboración.</p></div><a class="btn" href="mailto:contacto@tekove.com?subject=Consulta%20sobre%20biopl%C3%A1sticos%20TEKOVE">Escríbenos ↗</a></div></div></section>
+</main>
+<footer><div class="wrap footer-row"><div class="footer-brand">TEKOVE <span style="color:#c8e6a0">·</span> CEOM</div><div>Bioplásticos a partir de residuos orgánicos.</div><div>Feria de Ciencias Empresarial · 2026</div></div></footer>
+</body></html>
